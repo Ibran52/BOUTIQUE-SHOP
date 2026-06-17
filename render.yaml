@@ -1,0 +1,14 @@
+services:
+  - type: static-site
+    name: boutique-shop
+    env: static
+    repo: https://github.com/Ibran52/BOUTIQUE-SHOP.git
+    branch: main
+    buildCommand: npm install && npm run build
+    publishPath: dist
+    autoDeploy: true
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: APP_URL
+        sync: false
