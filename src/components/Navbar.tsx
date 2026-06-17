@@ -16,6 +16,7 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -39,10 +40,10 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-3 group">
           <div className="logo flex flex-col -space-y-1.5 leading-none">
             <span className="font-heading text-3xl font-black tracking-tighter text-foreground group-hover:text-primary transition-colors duration-500">
-              PUSHP
+              RAUSHAN
             </span>
             <span className="text-[10px] uppercase tracking-[0.5em] font-bold text-primary text-center">
-              LADIES WEAR
+              BOUTIQUE
             </span>
           </div>
         </Link>
@@ -79,18 +80,19 @@ export default function Navbar() {
           </Link>
 
           {/* Mobile Nav */}
-          <Sheet>
-            <SheetTrigger asChild>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger render={
               <Button variant="ghost" size="icon" className="md:hidden rounded-full">
                 <Menu className="w-6 h-6" />
               </Button>
-            </SheetTrigger>
+            } />
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col gap-8 mt-12">
                 {NAV_LINKS.map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
+                    onClick={() => setIsOpen(false)}
                     className={`text-2xl font-heading font-medium ${
                       location.pathname === link.path ? 'text-primary' : 'text-foreground'
                     }`}

@@ -10,10 +10,10 @@ export default function About() {
       exit={{ opacity: 0 }}
       className="pt-24"
     >
-      <div className="bg-muted/30 py-24">
+      <div className="bg-muted/30 py-12 md:py-24">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">About Our Boutique</h1>
-          <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
+          <h1 className="text-3xl md:text-5xl font-heading font-bold mb-4 md:mb-6">About Our Boutique</h1>
+          <p className="text-muted-foreground max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
             A legacy of elegance, quality tailoring, and the finest women's fashion in Ulhasnagar.
             Our reputation is built on trust, unparalleled craftsmanship, and a passionate dedication
             to making every client look and feel absolutely stunning on their most important days.
@@ -23,10 +23,10 @@ export default function About() {
 
       <AboutSection />
 
-      <section className="py-24 bg-muted/20">
+      <section className="py-16 md:py-24 bg-muted/20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="text-center p-8 bg-background rounded-3xl shadow-sm">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
+            <div className="text-center p-6 md:p-8 bg-background rounded-3xl shadow-sm">
               <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mx-auto mb-6">
                 <span className="text-2xl font-bold">25+</span>
               </div>

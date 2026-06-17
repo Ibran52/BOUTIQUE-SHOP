@@ -13,20 +13,35 @@ export default function Footer() {
                 P
               </div>
               <span className="font-heading text-xl font-bold tracking-tight">
-                Pushp <span className="text-primary">Ladies Wear</span>
+                Raushan <span className="text-primary">Boutique</span>
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Elegant styles for every woman. We specialize in custom tailoring and the latest women's fashion trends.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-background border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a
+                href="https://www.instagram.com/i_am_zamshaid_02?igsh=bzJrZnZtNDJ5cGxh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-background border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-background border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a
+                href="https://www.facebook.com/share/1Ssh4SzGEf/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-background border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-background border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a
+                href="https://wa.me/919075743952?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20Raushan%20Boutique."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-background border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
                 <MessageCircle className="w-5 h-5" />
               </a>
             </div>
@@ -58,15 +73,17 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex gap-3 text-sm text-muted-foreground">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>Shop No. 02, Babasai Nagar, Ulhasnagar-4, Maharashtra 421004</span>
+                <span>Shop No. 02, U-21, Top Floor, Near Rameshwar Building, Subhash Park, Uttam Nagar, New Delhi, Delhi 110059, India</span>
               </li>
               <li className="flex gap-3 text-sm text-muted-foreground">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>+91 9011307658</span>
+                <span>+91 9075743952 
+                      +91 8986199578
+                </span>
               </li>
               <li className="flex gap-3 text-sm text-muted-foreground">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span>mohamadaslamali52@gmail.com</span>
+                <span>mdzamshaidalam@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -75,11 +92,32 @@ export default function Footer() {
         <Separator className="mb-8 opacity-5" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-muted-foreground">
-          <p className="max-w-[500px] leading-relaxed">Shop No. 02, Babasai Nagar, Opposite Punejas Group Tuitions, Baba Radheshyam Marg, Bhatia Chowk, Ulhasnagar-4, MH 421004</p>
+          <p className="max-w-[500px] leading-relaxed">Shop No. 02, U-21, Top Floor, Near Rameshwar Building, Subhash Park, Uttam Nagar, New Delhi, Delhi 110059, India</p>
           <div className="flex gap-4">
-            <a href="#" className="w-9 h-9 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300">ig</a>
-            <a href="#" className="w-9 h-9 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300">fb</a>
-            <a href="#" className="w-9 h-9 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300">wa</a>
+            <a
+              href="https://www.instagram.com/i_am_zamshaid_02?igsh=bzJrZnZtNDJ5cGxh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300"
+            >
+              <Instagram className="w-4 h-4" />
+            </a>
+            <a
+              href="https://www.facebook.com/share/1Ssh4SzGEf/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300"
+            >
+              <Facebook className="w-4 h-4" />
+            </a>
+            <a
+              href="https://wa.me/919075743952?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20Raushan%20Boutique."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300"
+            >
+              <MessageCircle className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </div>

@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 
 export default function AboutSection() {
   return (
-    <section className="py-24 overflow-hidden">
+    <section className="py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -61,17 +61,17 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Our Story</span>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold mb-6 md:mb-8 leading-tight">
               Crafting Elegance Since <span className="text-primary italic">2000</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
-              Pushp Ladies Wear is more than just a boutique; it's a destination for women who appreciate fine craftsmanship and timeless style. Located in the heart of Ulhasnagar, we have been serving our community with the latest designs and impeccable tailoring for over two decades.
+            <p className="text-muted-foreground text-sm md:text-lg mb-4 leading-relaxed">
+              Raushan Boutique is more than just a boutique; it's a destination for women who appreciate fine craftsmanship and timeless style. Located in the heart of Ulhasnagar, we have been serving our community with the latest designs and impeccable tailoring for over two decades.
             </p>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+            <p className="text-muted-foreground text-sm md:text-lg mb-6 md:mb-8 leading-relaxed">
               Founded on the belief that every woman deserves to feel confident and elegant in what she wears, we pour our heart into every stitch. From stunning traditional wear for festive seasons to contemporary designs for modern events, our master tailors work closely with each client to bring their unique vision to life with the finest fabrics.
             </p>
 
-            <div className="space-y-4 mb-10">
+            <div className="space-y-3 md:space-y-4 mb-8 md:mb-10">
               {[
                 'Customized Tailoring & Fitting',
                 'Latest Designer Collection',
@@ -81,7 +81,7 @@ export default function AboutSection() {
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary" />
-                  <span className="font-medium">{item}</span>
+                  <span className="font-medium text-sm md:text-base">{item}</span>
                 </div>
               ))}
             </div>

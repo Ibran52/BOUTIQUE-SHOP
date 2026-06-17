@@ -9,10 +9,10 @@ export default function Collection() {
       exit={{ opacity: 0 }}
       className="pt-24"
     >
-      <div className="bg-muted/30 py-24">
+      <div className="bg-muted/30 py-12 md:py-24">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6">Our Collection</h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <h1 className="text-4xl md:text-7xl font-heading font-bold mb-4 md:mb-6">Our Collection</h1>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">
             Explore our wide range of traditional and contemporary designs, handcrafted for perfection.
           </p>
         </div>

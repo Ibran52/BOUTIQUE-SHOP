@@ -14,17 +14,17 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Contact Us</span>
-            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8">Get in Touch</h2>
-            <p className="text-muted-foreground text-lg mb-12">
+            <h2 className="text-3xl md:text-6xl font-heading font-bold mb-6 md:mb-8">Get in Touch</h2>
+            <p className="text-muted-foreground text-base md:text-lg mb-8 md:mb-12">
               Have a question or want to book a tailoring appointment? Fill out the form or visit our boutique.
             </p>
 
@@ -36,8 +36,8 @@ export default function ContactForm() {
                 <div>
                   <h4 className="font-heading text-xl font-bold mb-2">Our Boutique</h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    Shop No. 02, Babasai Nagar, Opposite Punejas Group Tuitions,<br />
-                    Baba Radheshyam Marg, Bhatia Chowk, Ulhasnagar-4, Maharashtra 421004
+                    Shop No. 02, U-21, Top Floor, Near Rameshwar Building,<br />
+                    Subhash Park, Uttam Nagar, New Delhi, Delhi 110059, India
                   </p>
                 </div>
               </div>
@@ -48,7 +48,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h4 className="font-heading text-xl font-bold mb-2">Phone Number</h4>
-                  <p className="text-muted-foreground">+91 90113 07658</p>
+                  <p className="text-muted-foreground">+91 9075743952 <br /> +91 8986199578</p>
                 </div>
               </div>
 
@@ -58,21 +58,21 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h4 className="font-heading text-xl font-bold mb-2">Email Address</h4>
-                  <p className="text-muted-foreground">mohamadaslamali52@gmail.com</p>
+                  <p className="text-muted-foreground">mdzamshaidalam@gmail.com</p>
                 </div>
               </div>
 
               {/* Embedded Google Map */}
               <div className="w-full h-64 mt-8 rounded-3xl overflow-hidden shadow-lg border-4 border-white">
                 <iframe
-                  title="Pushp Ladies Wear Location"
+                  title="Raushan Boutique Location"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   loading="lazy"
                   allowFullScreen
                   referrerPolicy="no-referrer-when-downgrade"
-                  src="https://maps.google.com/maps?q=Shop%20No.%2002,%20Babasai%20Nagar,%20Opposite%20Punejas%20Group%20Tuitions,%20Baba%20Radheshyam%20Marg,%20Bhatia%20Chowk,%20Ulhasnagar-4,%20Maharashtra%20421004&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Subhash+Park,+Uttam+Nagar,+New+Delhi,+Delhi+110059,+India&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 ></iframe>
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function ContactForm() {
             transition={{ delay: 0.2 }}
           >
             <Card className="border-none shadow-2xl rounded-3xl overflow-hidden">
-              <CardContent className="p-8 md:p-12">
+              <CardContent className="p-6 md:p-12">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">

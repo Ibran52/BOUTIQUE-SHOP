@@ -24,6 +24,10 @@ const SLIDES = [
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -35,8 +39,34 @@ export default function Hero() {
   const next = () => setCurrent((prev) => (prev + 1) % SLIDES.length);
   const prev = () => setCurrent((prev) => (prev - 1 + SLIDES.length) % SLIDES.length);
 
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) {
+      next();
+    } else if (isRightSwipe) {
+      prev();
+    }
+  };
+
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section 
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+      className="relative h-screen w-full overflow-hidden"
+    >
       <AnimatePresence>
         <motion.div
           key={current}
@@ -62,7 +92,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-3xl md:text-5xl font-heading text-white font-bold mb-6 max-w-4xl leading-[1.1]"
+          className="text-2xl sm:text-3xl md:text-5xl font-heading text-white font-bold mb-4 md:mb-6 max-w-4xl leading-[1.2] md:leading-[1.1]"
         >
           {SLIDES[current].title}
         </motion.h1>
@@ -70,14 +100,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="flex flex-col items-center gap-10"
+          className="flex flex-col items-center gap-4 md:gap-10"
         >
           <Link to="/collection">
-            <Button size="lg" className="bg-foreground text-background hover:bg-primary hover:text-white rounded-full px-10 py-7 text-xs font-semibold uppercase tracking-[1.5px] transition-all duration-500">
+            <Button size="lg" className="bg-foreground text-background hover:bg-primary hover:text-white rounded-full px-8 py-5 md:px-10 md:py-7 text-[10px] md:text-xs font-semibold uppercase tracking-[1.5px] transition-all duration-500">
               Explore Collection
             </Button>
           </Link>
-          <div className="max-w-md bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10">
+          <div className="hidden md:block max-w-md bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10">
             <strong className="text-white block mb-2 text-lg font-heading italic">Quality Tailoring</strong>
             <p className="text-white/80 text-sm leading-relaxed">
               Expert custom fitting and modern designs for the sophisticated woman. Experience boutique tailoring at its finest.
@@ -100,13 +130,13 @@ export default function Hero() {
 
       <button
         onClick={prev}
-        className="absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
+        className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/30 items-center justify-center text-white hover:bg-white hover:text-black transition-all"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={next}
-        className="absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
+        className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/30 items-center justify-center text-white hover:bg-white hover:text-black transition-all"
       >
         <ChevronRight className="w-6 h-6" />
       </button>

@@ -145,7 +145,7 @@ export const DRESSES: Dress[] = [
     id: '21',
     name: 'Kaftan Dress',
     category: 'Casual',
-    image: 'https://img.perniaspopupshop.com/catalog/product/p/a/pame0322110_1.jpg',
+    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=600',
     description: 'Loose and comfy kaftan for relaxed wear.'
   },
   {
@@ -260,7 +260,7 @@ export const DRESSES: Dress[] = [
     id: '37',
     name: 'Striped Shirt Maxi',
     category: 'Western',
-    image: 'https://m.media-amazon.com/images/I/61THvXQ3TeL._AC_UY1100_.jpg',
+    image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=600',
     description: 'Modern striped shirt-style maxi dress.'
   },
   {
@@ -288,7 +288,7 @@ export const DRESSES: Dress[] = [
     id: '41',
     name: 'Printed Angrakha Kurti',
     category: 'Kurtis',
-    image: 'https://sukritistore.com/cdn/shop/files/1_2fdf2382-7a43-4f7c-9bbc-68cc8ab97302.jpg?v=1687348509',
+    image: 'https://images.unsplash.com/photo-1608748010899-18f300247112?q=80&w=600',
     description: 'Stylish angrakha style kurti with side tie-ups.'
   },
   {
@@ -309,7 +309,7 @@ export const DRESSES: Dress[] = [
     id: '44',
     name: 'Floral Wrap Summer Dress',
     category: 'Western',
-    image: 'https://www.shoplovestitch.com/cdn/shop/products/I-73086W-SCL-BS_NATURAL-MUSTARD-Z_600x.jpg?v=1748481175',
+    image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=600',
     description: 'Lightweight wrap dress with a fresh floral print.'
   },
   {
@@ -344,7 +344,7 @@ export const DRESSES: Dress[] = [
     id: '49',
     name: 'Gold Embroidered Lehenga',
     category: 'Wedding',
-    image: 'https://img.perniaspopupshop.com/catalog/product/s/e/SEGC092381_1.jpg?impolicy=detailimageprod',
+    image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600',
     description: 'Classic gold embroidered lehenga for a royal look.'
   },
   {
@@ -400,7 +400,7 @@ export const DRESSES: Dress[] = [
     id: '57',
     name: 'Traditional Styles',
     category: 'Traditional',
-    image: 'https://m.media-amazon.com/images/I/71diOzEumuL._AC_UY1100_.jpg',
+    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600',
     description: 'Classic traditional wear that reflects cultural heritage.'
   },
   {

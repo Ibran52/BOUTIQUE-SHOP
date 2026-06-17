@@ -29,19 +29,19 @@ export default function Favorites() {
       exit={{ opacity: 0 }}
       className="pt-24 min-h-screen"
     >
-      <div className="bg-muted/30 py-24">
+      <div className="bg-muted/30 py-12 md:py-24">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6">My Favorites</h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <h1 className="text-4xl md:text-7xl font-heading font-bold mb-4 md:mb-6">My Favorites</h1>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">
             Your curated list of designs you love.
           </p>
         </div>
       </div>
 
-      <section className="py-24">
+      <section className="py-12 md:py-24">
         <div className="container mx-auto px-4">
           {favoriteDresses.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-8">
               <AnimatePresence mode="popLayout">
                 {favoriteDresses.map((dress) => (
                   <DressCard key={dress.id} dress={dress} />
